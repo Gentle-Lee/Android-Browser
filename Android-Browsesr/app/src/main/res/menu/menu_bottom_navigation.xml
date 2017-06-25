@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_home"
+        android:title="Home"
+        android:icon="@drawable/ic_keyboard_arrow_left_black_24dp"/>
+
+    <item
+        android:id="@+id/action_explore"
+        android:title="Explore"
+        android:icon="@drawable/ic_explore_black_36dp"/>
+
+    <item
+        android:id="@+id/action_me"
+        android:title="Me"
+        android:icon="@drawable/ic_power_settings_new_black_24dp"/>
+
+</menu>
