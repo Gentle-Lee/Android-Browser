@@ -18,6 +18,10 @@
         </activity>
         <activity android:name=".Activity_webView">
         </activity>
+        <activity
+            android:name=".TabLayoutActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
     </application>
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 </manifest>

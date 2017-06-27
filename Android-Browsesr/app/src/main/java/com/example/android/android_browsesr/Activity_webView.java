@@ -27,9 +27,9 @@ public class Activity_webView extends AppCompatActivity implements View.OnClickL
     boolean goBackToHome = false;
     SwipeRefreshLayout swipeRefreshLayout;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.webview_activity);
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.webview_activity);
 
         swipeRefreshLayout = (SwipeRefreshLayout)findViewById(R.id.refresh_layout);
 
@@ -61,10 +61,16 @@ public class Activity_webView extends AppCompatActivity implements View.OnClickL
                     backButton.setImageResource(R.drawable.ic_keyboard_arrow_left_black_24dp);
                     webView.goBack();
                 }else{
-                    backButton.setImageResource(R.drawable.ic_cancel_black_24dp);
+                    backButton.setImageResource(R.drawable.ic_highlight_off_black_24dp);
                     goBackToHome = true;
                 }
                 break;
+            case R.id.bookmark_icon:
+                break;
+            case R.id.url_TextView:
+                Intent intent = new Intent(Activity_webView.this,MainActivity.class);
+                intent.putExtra("urlString",urlString);
+                Activity_webView.this.startActivity(intent);
         }
     }
 

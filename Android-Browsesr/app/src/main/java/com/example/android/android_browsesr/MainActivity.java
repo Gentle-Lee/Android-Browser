@@ -25,7 +25,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_page_activity);
 
+        Intent intent = getIntent();
+        String intentUrlString = intent.getStringExtra("urlString");
         editText = (EditText)findViewById(R.id.url_editText);
+
+        editText.setText(intentUrlString);
         editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
@@ -83,6 +87,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 canExit = true;
                 Toast.makeText(getBaseContext(),"Oops..exit? click one more time~",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.menu_icon:
+                Toast.makeText(getBaseContext(), "Menu", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this,TabLayoutActivity.class);
+                MainActivity.this.startActivity(intent);
                 break;
         }
     }
