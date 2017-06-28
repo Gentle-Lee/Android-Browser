@@ -30,7 +30,8 @@
             android:name=".DownLoadManagerActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-
+        <activity android:name=".SettingActivity">
+        </activity>
     </application>
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />

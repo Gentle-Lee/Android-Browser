@@ -26,7 +26,7 @@ public class WebViewActivity extends AppCompatActivity implements View.OnClickLi
 
     private static String urlString ;
     private static String urlName;
-    WebView webView;
+    public static WebView webView;
     ImageView backButton,bookmarkButton;
     TextView urlTextView;
     SwipeRefreshLayout swipeRefreshLayout;
@@ -166,4 +166,19 @@ public class WebViewActivity extends AppCompatActivity implements View.OnClickLi
         return false;
     }
 
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        //清空所有Cookie
+        CookieSyncManager.createInstance(WebViewActivity.this);  //Create a singleton CookieSyncManager within a context
+        CookieManager cookieManager = CookieManager.getInstance(); // the singleton CookieManager instance
+        cookieManager.removeAllCookie();// Removes all cookies.
+        CookieSyncManager.getInstance().sync(); // forces sync manager to sync now
+
+        webView.setWebChromeClient(null);
+        webView.setWebViewClient(null);
+        webView.getSettings().setJavaScriptEnabled(false);
+        webView.clearCache(true);
+    }
 }

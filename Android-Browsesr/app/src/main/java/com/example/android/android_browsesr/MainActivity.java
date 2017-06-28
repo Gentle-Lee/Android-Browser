@@ -110,7 +110,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 data.setData(Uri.parse("mailto:2015150060@email.szu.edu.cn"));
                 startActivity(data);
                 break;
-
+            case R.id.settings:
+                Intent settingIntent = new Intent(MainActivity.this,SettingActivity.class);
+                MainActivity.this.startActivity(settingIntent);
         }
     }
 
@@ -154,4 +156,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             sp.edit().putString("history", sb.toString()).commit();
         }
     }
+
+
 }
