@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/urlText"
+            android:text="Download Adddress:"
+            android:textSize="12dp"
+            android:layout_alignBottom="@+id/urlPath"
+            android:layout_toStartOf="@+id/urlPath"
+            android:layout_toLeftOf="@+id/urlPath" />
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/urlPath"
+            android:textSize="12dp"
+            android:maxLength="100"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fileText"
+            android:text="File Path:"
+            android:textSize="12dp"
+            android:layout_alignBaseline="@+id/filePath"
+            android:layout_alignBottom="@+id/filePath"
+            android:layout_alignLeft="@+id/threadNumberText"
+            android:layout_alignStart="@+id/threadNumberText" />
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/filePath"
+            android:hint="pls input download path"
+            android:textSize="12dp"
+            android:layout_below="@+id/urlPath"
+            android:layout_toRightOf="@+id/urlText"
+            android:layout_toEndOf="@+id/urlText" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/threadNumberText"
+            android:text="Thread  Number:"
+            android:textSize="12dp"
+            android:layout_below="@+id/filePath"
+            android:layout_toLeftOf="@+id/filePath"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/threadNumber"
+            android:inputType="number"
+            android:text="5"
+            android:textSize="12dp"
+            android:layout_below="@+id/filePath"
+            android:layout_toRightOf="@+id/threadNumberText"
+            android:layout_toEndOf="@+id/threadNumberText" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/threadNumber"
+            android:id="@+id/linearLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            <ProgressBar
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:id="@+id/progressBar"
+                android:layout_weight="8"
+                style="?android:attr/progressBarStyleHorizontal"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/dowloadMessage"
+                android:layout_weight="2"
+                android:textAlignment="center"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pause"
+            android:id="@+id/pause"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginEnd="25dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resume"
+            android:id="@+id/resume"
+            android:layout_below="@+id/linearLayout"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:id="@+id/start"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp" />
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

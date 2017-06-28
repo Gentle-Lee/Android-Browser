@@ -16,7 +16,7 @@
         android:layout_marginTop="150dp"
         android:onClick="true" />
 
-    <EditText
+    <AutoCompleteTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/url_editText"
@@ -68,14 +68,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_download"
-                android:layout_centerHorizontal="true"/>
+                android:layout_centerHorizontal="true" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/download_icon"
                 android:text="download"
                 android:layout_marginRight="15dp"
-                android:layout_centerHorizontal="true"/>
+                android:layout_centerHorizontal="true" />
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/settings"
